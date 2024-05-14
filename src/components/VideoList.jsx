@@ -1,5 +1,5 @@
 import VideoListEntry from './VideoListEntry.js';
-var VideoList = ({videos}) => {
+var VideoList = ({videos, set}) => {
   /*const arr = videos.map(function(video) {
     return <div><h5><em>videoListEntry</em> <VideoListEntry video={video}/></h5></div>;
   }); */
@@ -7,7 +7,7 @@ var VideoList = ({videos}) => {
   return (
     <div className="video-list">
       {videos.map(function(video) {
-        return <div><h5><em>videoListEntry</em> <VideoListEntry video={video}/></h5></div>;
+        return <div><h5><em>videoListEntry</em> <VideoListEntry video={video} set={set}/></h5></div>;
       })}
     </div>
   );

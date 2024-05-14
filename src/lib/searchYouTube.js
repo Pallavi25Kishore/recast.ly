@@ -5,7 +5,23 @@ $.ajaxPrefilter(function (settings, _, jqXHR) {
 });
 
 var searchYouTube = (query, callback) => {
-  // TODO
+  $.ajax({
+    url: 'https://app-hrsei-api.herokuapp.com/api/recastly/videos',
+    type: 'GET',
+    data: {
+      q: query,
+      part: 'snippet',
+      maxResults: 1,
+      type: 'video',
+      videoEmbeddable: true
+    },
+    success: function(data) {
+      console.log('sucess', data);
+    },
+    error: function(data) {
+      console.error('Failed', data);
+    }
+  });
 };
 
 export default searchYouTube;
