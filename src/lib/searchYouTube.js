@@ -16,6 +16,7 @@ var searchYouTube = (query, callback) => {
       videoEmbeddable: true
     },
     success: function(data) {
+      callback(data);
       console.log('sucess', data);
     },
     error: function(data) {

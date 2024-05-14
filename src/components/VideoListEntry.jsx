@@ -6,7 +6,7 @@ var VideoListEntry = ({video, set}) => {
   return (
     <div className="video-list-entry media">
       <div className="media-left media-middle">
-        <img className="media-object" src="https://i.ytimg.com/vi/1w8Z0UOXVaY/default.jpg" alt="" />
+        <img className="media-object" src={video.snippet.thumbnails.default.url}/*"https://i.ytimg.com/vi/1w8Z0UOXVaY/default.jpg"*/ alt="" />
       </div>
       <div className="media-body">
         <div className="video-list-entry-title" onClick={videoClick}>{video.snippet.title}</div>
